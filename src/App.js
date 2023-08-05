@@ -26,12 +26,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="/admin"
+          path="https://qrmenu-b4wd.onrender.com/admin"
           element={user ? <Admin /> : <Navigate to="/login" />}
         />
-        <Route path="/login" element={<Login />} />
-        <Route path="/poyraz" element={<Restoran />} />
-        <Route path="/gurme" element={<Gurme />} />
+        <Route
+          path="https://qrmenu-b4wd.onrender.com/login"
+          element={<Login />}
+        />
+        <Route path="https://qrmenu-b4wd.onrender.com/poyraz" element={<Restoran />} />
+        <Route path="https://qrmenu-b4wd.onrender.com/gurme" element={<Gurme />} />
       </Routes>
     </BrowserRouter>
   );
