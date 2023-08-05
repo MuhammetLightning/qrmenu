@@ -29,7 +29,7 @@ export default function Admin() {
     restoranName: restoran,
     category: "",
   });
-  const user = useFetch(`https://qrmenu_b.onrender.com/api/users/${userId}`);
+  const user = useFetch(`https://qrmenu-backend.onrender.com/api/users/${userId}`);
   const [formDataUser, setFormDataUser] = useState({
     username: user.data.username,
     email: user.data.email,
@@ -62,7 +62,7 @@ export default function Admin() {
   const encodedSelected = encodeURIComponent(selected);
   const encodedRestoran = encodeURIComponent(restoran);
   const { data, loading, error, reFetch } = useFetch(
-    `https://qrmenu_b.onrender.com/api/menu?category=${encodedSelected}&restoranName=${encodedRestoran}`
+    `https://qrmenu-backend.onrender.com/api/menu?category=${encodedSelected}&restoranName=${encodedRestoran}`
   );
 
   const [data1, setData1] = useState([]);
@@ -105,7 +105,7 @@ export default function Admin() {
     // setFormData({ ...formData, restoranName: restoran });
 
     try {
-      await axios.post(`https://qrmenu_b.onrender.com/api/menu`, formData);
+      await axios.post(`https://qrmenu-backend.onrender.com/api/menu`, formData);
       // Başarılı gönderimden sonra, formu kapatın ve verileri tekrar çekmek için reFetch'i çağırın
       setIsFormOpen(false);
       reFetch();
@@ -132,7 +132,7 @@ export default function Admin() {
   const handleUpdate = async (event) => {
     event.preventDefault();
     try {
-      await axios.put(`https://qrmenu_b.onrender.com/api/menu/${updateId}`, formData);
+      await axios.put(`https://qrmenu-backend.onrender.com/api/menu/${updateId}`, formData);
       // Başarılı gönderimden sonra, formu kapatın ve verileri tekrar çekmek için reFetch'i çağırın
       setIsFormOpen(false);
       reFetch();
@@ -150,7 +150,7 @@ export default function Admin() {
     event.preventDefault();
     try {
       await axios.put(
-        `https://qrmenu_b.onrender.com/api/users/${userId}`,
+        `https://qrmenu-backend.onrender.com/api/users/${userId}`,
         formDataUser
       );
       setIsUserFormOpen(false);
@@ -166,7 +166,7 @@ export default function Admin() {
 
     if (formData.restoranName) {
       try {
-        await axios.post(`https://qrmenu_b.onrender.com/api/menu`, formData);
+        await axios.post(`https://qrmenu-backend.onrender.com/api/menu`, formData);
         // Başarılı gönderimden sonra, formu kapatın ve verileri tekrar çekmek için reFetch'i çağırın
         setIsFormOpen(false);
         reFetch();
@@ -185,7 +185,7 @@ export default function Admin() {
   };
   const handleDelete = async (itemId) => {
     try {
-      await axios.delete(`https://qrmenu_b.onrender.com/api/menu/${itemId}`); // Replace '/api/items' with your backend API endpoint for deleting data from MongoDB
+      await axios.delete(`https://qrmenu-backend.onrender.com/api/menu/${itemId}`); // Replace '/api/items' with your backend API endpoint for deleting data from MongoDB
       reFetch();
     } catch (error) {
       console.error("Error deleting data from MongoDB:", error);

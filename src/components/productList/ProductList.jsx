@@ -13,7 +13,7 @@ export default function ProductList({
   dataC,
 }) {
   const { data, loading, error, reFetch } = useFetch(
-    `https://qrmenu_b.onrender.com/api/menu/categories/${restoran}`
+    `https://qrmenu-backend.onrender.com/api/menu/categories/${restoran}`
   );
 
   useEffect(() => {

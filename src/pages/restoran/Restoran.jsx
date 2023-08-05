@@ -7,7 +7,7 @@ import useFetch from "../../hooks/useFetch.js";
 
 const Restoran = () => {
   const { data, loading, error, reFetch } = useFetch(
-    `https://qrmenu_b.onrender.com/api/users/64ce08bb6bfcd29b081e51a6`
+    `https://qrmenu-backend.onrender.com/api/users/64ce08bb6bfcd29b081e51a6`
   );
   return (
     <div className="restoran">

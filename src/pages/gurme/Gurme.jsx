@@ -6,7 +6,7 @@ import Footer from "../../components/footer/Footer.jsx";
 
 const Restoran = () => {
   const { data, loading, error, reFetch } = useFetch(
-    `https://qrmenu_b.onrender.com/api/users/64ce084e6bfcd29b081e4fbe`
+    `https://qrmenu-backend.onrender.com/api/users/64ce084e6bfcd29b081e4fbe`
   );
   return (
     <div className="restoran">

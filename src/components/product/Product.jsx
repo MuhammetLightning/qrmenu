@@ -11,7 +11,7 @@ export default function Product({ restoranName }) {
   // "proxy": "https://bilgideri.onrender.com/api",
   const [selected, setSelected] = useState();
   const { data, loading, error } = useFetch(
-    `https://qrmenu_b.onrender.com/api/menu?category=${selected}&restoranName=${restoranName}`
+    `https://qrmenu-backend.onrender.com/api/menu?category=${selected}&restoranName=${restoranName}`
   );
   // console.log(data)
   const [data1, setData1] = useState([]);
