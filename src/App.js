@@ -18,6 +18,8 @@ import Footer from "./components/footer/Footer.jsx";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext.js";
 
+
+
 function App() {
   const { user } = useContext(AuthContext);
 
@@ -26,15 +28,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="https://qrmenu-b4wd.onrender.com/admin"
+          path="/admin"
           element={user ? <Admin /> : <Navigate to="/login" />}
         />
-        <Route
-          path="https://qrmenu-b4wd.onrender.com/login"
-          element={<Login />}
-        />
-        <Route path="https://qrmenu-b4wd.onrender.com/poyraz" element={<Restoran />} />
-        <Route path="https://qrmenu-b4wd.onrender.com/gurme" element={<Gurme />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/poyraz" element={<Restoran />} />
+        <Route path="/gurme" element={<Gurme />} />
       </Routes>
     </BrowserRouter>
   );
