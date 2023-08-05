@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: teal;
+    margin-top: 50px;
+    // height: 100%;
+
+    gap: 10px;
+    .icon {
+        display: flex;
+        color: white;
+    }
+    .phone {
+        margin-top: 20px;
+        color: white;
+        text-align: center;
+    }
+    .adres {
+        color: white;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+    }
+}

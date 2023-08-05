@@ -1,0 +1,355 @@
+@import "../../global.scss";
+.cW {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .slidderAdmin {
+    margin-top: 70px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    h1 {
+      text-align: center;
+    }
+    .addCatWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid teal;
+      border-radius: 5px;
+      width: 50%;
+      margin: 40px 25%;
+      height: 30px;
+      gap: 10px;
+      // text-align: center;
+      // flex-direction: ;
+      cursor: pointer;
+
+      .addCat {
+        color: teal;
+        // width: 40%;
+        height: 20px;
+        // margin-left: 50px;
+
+        @include mobile {
+          // width: 40%;
+          margin-left: 0;
+        }
+      }
+      span {
+        color: teal;
+        // text-align: center;
+      }
+    }
+  }
+
+  .admin {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    // min-height: 100vh;
+
+    h1 {
+      font-size: 50px;
+      overflow: hidden;
+      padding: 30px 0 0 0;
+      color: $mainColor;
+
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+
+    ul {
+      margin: 10px;
+      padding: 30px;
+      list-style: none;
+      display: flex;
+      overflow: auto;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      height: 10%;
+      width: 100%;
+
+      @include mobile {
+        // margin: 15px 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 50%;
+      }
+    }
+
+    .itemContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      // margin: 30px;
+      // flex-wrap: wrap;
+      height: 100%;
+      // background-color: red;
+      overflow: hidden;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .itemWrapper {
+        display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        // height: 50px;
+        width: 100%;
+        @include mobile {
+          width: 100%;
+        }
+        .form {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+          width: 70%;
+
+          input {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+            &:focus {
+              outline: none;
+              border-color: #007bff;
+            }
+          }
+          .buttonWrapper {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            .add {
+              background-color: #007bff;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              flex: 1;
+
+              &:hover {
+                background-color: #0056b3;
+              }
+            }
+            .cancel {
+              background-color: #ff0040;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              flex: 1;
+
+              &:hover {
+                background-color: #b30045;
+              }
+            }
+          }
+        }
+        .iconA {
+          height: 50px;
+          margin-top: 10px;
+          color: teal;
+          border: 2px solid teal;
+          cursor: pointer;
+          //   background-color: #000000aa;
+          border-radius: 5px;
+          //   width: 15%;
+        }
+        .iWrapper {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: center;
+          // align-items: center;
+          gap: 50px;
+
+          .iconWrapper {
+            display: flex;
+            gap: 5px;
+            // border: 2px solid #000;
+            align-items: center;
+            width: fit-content;
+            padding-left: 20px;
+            // width: 100%;
+            .iconD {
+              height: 90%;
+              //   width: 90%;
+              //   background-color: black;
+              //   border: 2px solid #000;
+              color: crimson;
+              cursor: pointer;
+            }
+            .iconU {
+              //   border: 2px solid #000;
+              cursor: pointer;
+              height: 90%;
+              color: teal;
+              //   background-color: teal;
+            }
+          }
+          .item {
+            //   height: 250px;
+            margin-left: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            //   justify-content: space-between;
+            //   flex-direction: column;
+            background-color: #000000aa;
+            //   opacity: 0.7;
+            color: white;
+            gap: 10px;
+            border-bottom: 2px solid #000;
+            width: 100%;
+            @include mobile {
+              width: 100%;
+            }
+
+            .content {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              justify-content: space-between;
+              align-items: center;
+
+              .name {
+                // position: absolute;
+                font-size: 20px;
+                width: 70%;
+                // height: 100px;
+                padding-left: 10px;
+                //   text-align: center;
+                // align-items: center;
+                // justify-content: center;
+                // z-index: 99;
+                color: crimson;
+                @include mobile {
+                  width: 100%;
+                  font-size: 15px;
+                }
+              }
+              .price {
+                // float: right;
+                // margin-right: 20px;
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                // width: 100%;
+                // right: 100px;
+                // justify-content: flex-end;
+                @include mobile {
+                  width: 50%;
+                  font-size: 15px;
+                }
+              }
+            }
+
+            .icon {
+              padding-left: 10px;
+              // margin-left: 10px;
+              // border-left: 2px solid #000;
+              // height: px;
+              // height: 50%;
+            }
+
+            &:hover {
+              //   opacity: 0.2;
+            }
+          }
+          @include mobile {
+            width: 100%;
+            // justify-content: center;
+            // margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  .userInfo {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    .formU {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      width: 70%;
+
+      input {
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+        &:focus {
+          outline: none;
+          border-color: #007bff;
+        }
+      }
+      .buttonWrapperU {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        .add {
+          background-color: #007bff;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          flex: 1;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+        .cancel {
+          background-color: #ff0040;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          flex: 1;
+
+          &:hover {
+            background-color: #b30045;
+          }
+        }
+      }
+    }
+    .uIcon {
+      position: absolute;
+      //   justify-content: end;
+      //   align-items: end;
+      height: 40px;
+      top: 60px;
+      // margin-left: 15px;
+      left: 10px;
+    }
+  }
+}

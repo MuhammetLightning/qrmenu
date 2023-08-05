@@ -1,0 +1,143 @@
+@import "../../global.scss";
+.slidder {
+  margin-top: 70px;
+  h1 {
+    text-align: center;
+  }
+}
+
+.product {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  // height: 100%;
+  margin-top: 10px;
+
+  h1 {
+    font-size: 50px;
+    overflow: hidden;
+    padding: 30px 0 0 0;
+    color: $mainColor;
+
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  ul {
+    margin: 10px;
+    padding: 30px;
+    list-style: none;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 10%;
+    width: 60%;
+
+    @include mobile {
+      // margin: 15px 0;
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 50%;
+    }
+  }
+
+  .itemContainer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    // margin: 30px;
+    // flex-wrap: wrap;
+    height: 100%;
+    // background-color: red;
+    overflow: hidden;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .itemWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // height: 50px;
+      width: 80%;
+      @include mobile {
+        width: 90%;
+      }
+      .item {
+        //   height: 250px;
+        margin: 0px 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        //   justify-content: space-between;
+        //   flex-direction: column;
+        background-color: #000000aa;
+        //   opacity: 0.7;
+        color: white;
+        gap: 10px;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        border-radius: 5px;
+
+        .content {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          justify-content: space-between;
+          align-items: center;
+
+          .name {
+            // position: absolute;
+            font-size: 20px;
+            width: 70%;
+            // height: 100px;
+            word-wrap: break-word;
+
+            padding-left: 10px;
+            //   text-align: center;
+            // align-items: center;
+            // justify-content: center;
+            // z-index: 99;
+            color: crimson;
+            @include mobile {
+              width: 100%;
+              font-size: 15px;
+            }
+          }
+          .price {
+            // float: right;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            // right: 100px;
+            // justify-content: flex-end;
+            @include mobile {
+              width: 20%;
+              font-size: 15px;
+              margin-right: 0;
+            }
+          }
+        }
+
+        .icon {
+          padding-left: 10px;
+          // height: px;
+          // height: 50%;
+        }
+      }
+    }
+  }
+}
