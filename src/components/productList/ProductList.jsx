@@ -18,7 +18,7 @@ export default function ProductList({
 
   useEffect(() => {
     reFetch();
-  }, [data, dataC]);
+  }, [data, dataC, restoran]);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
