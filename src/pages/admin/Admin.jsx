@@ -203,7 +203,7 @@ export default function Admin() {
           dataC={data}
           setData={setData1}
           onClick={() => setData1(data)}
-          restoran={restoran}
+          restoran={formData.restoranName}
         />
         <div
           className="addCatWrapper"
